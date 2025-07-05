@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "urn:uuid:{{certificateIdGoesHere}}",
+  "type": ["VerifiableCredential", "OpenBadgeCredential"],
+  "issuer": {
+    "id": "https://learn.mit.edu",
+    "type": ["Profile"],
+    "name": "MIT Learn",
+    "image": {
+      "id": "https://learn.mit.edu/logo.png",
+      "type": "Image",
+      "caption": "MIT Learn logo"
+    }
+  },
+  "image": {
+        "id": "https://learn.mit.edu/programCertificate.png",
+        "type": "Image",
+        "caption": "MIT Learn Program Certificate logo"
+  },
+  "validFrom": "2025-02-24T00:00:00Z",
+  "validUntil": "2030-01-01T00:00:00Z",
+  "name": "AI and Precision Medicine",
+  "description": "Program Certificate in AI and Precision Medicine.",
+  "credentialSubject": {
+    "id": "did:the student's did if we are using didAuth",
+    "type": ["AchievementSubject"],
+    "activityEndDate": "2023-03-01T00:00:00Z",
+    "activityStartDate": "2025-02-24T00:00:00Z",
+    "creditsEarned": 20.00,
+    "achievement": {
+  			"id": "https://if there is a urn id of any sort for the credential definition",
+  			"type": ["Achievement"],
+  			"criteria": {
+  				"narrative": "If you wanted to add some kind of criteria, e.g. a list of courses or modules, etc."
+  			},
+  			"description": "Lucas Delisle-Doray has successfully completed all modules and earned a Program Certificate in AI and Precision Medicine.",
+  			"name": "AI and Precision Medicine"
+  		}
+  }
+}
