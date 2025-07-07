@@ -35,8 +35,8 @@
         "type": [
             "AchievementSubject"
         ],
-        "activityEndDate": "2023-03-01T00:00:00Z",
-        "activityStartDate": "2025-02-24T00:00:00Z",
+        "activityStartDate": "2023-03-01T00:00:00Z",
+        "activityEndDate": "2025-02-24T00:00:00Z",
         "name": "Lucas Delisle-Doray",
         "creditsEarned": 20,
         "achievement": {
