@@ -33,6 +33,6 @@ const promises = files.filter(file=>file.isFile && file.name.endsWith('.json')).
 
 const markdownEntries = await Promise.all(promises);
 const finalIndexOfVCs = indexOfVCs.concat(markdownEntries.join(''))
-fs.writeFileSync(path.join(__dirname, 'certificates.md'), finalIndexOfVCs)
+fs.writeFileSync(path.join(__dirname, 'certificates/certificates.md'), finalIndexOfVCs)
 
 
