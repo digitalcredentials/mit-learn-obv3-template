@@ -25,7 +25,7 @@ const promises = files.filter(file=>file.isFile && file.name.endsWith('.json')).
 
 [${file.name}](${rawGithubURL})
 
-![QR](verifiableCredentials${relativePath.slice(0, -4)}png)
+![QR](certificates${relativePath.slice(0, -4)}png)
 
 `
     }
