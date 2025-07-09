@@ -1,0 +1,24 @@
+{
+  "name": "mit-learn-ob-template",
+  "version": "1.0.0",
+  "description": "OBv3 VCs for MIT Learn certificates.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalcredentials/mit-learn-ob-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digitalcredentials/mit-learn-ob-template/issues"
+  },
+  "homepage": "https://github.com/digitalcredentials/mit-learn-ob-template#readme",
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "type": "module"
+}
