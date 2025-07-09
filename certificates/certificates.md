@@ -12,17 +12,17 @@ The raw url is intended for testing in VerifierPlus and the QR for testing in th
 
 [courseCertificate.json](https://github.com/digitalcredentials/mit-learn-ob-template/raw/refs/heads/main/certificates/courseCertificate.json)
 
-![QR](certificates/courseCertificate.png)
+![QR](/courseCertificate.png)
 
 ### /moduleCertificate.json
 
 [moduleCertificate.json](https://github.com/digitalcredentials/mit-learn-ob-template/raw/refs/heads/main/certificates/moduleCertificate.json)
 
-![QR](certificates/moduleCertificate.png)
+![QR](/moduleCertificate.png)
 
 ### /programCertificate.json
 
 [programCertificate.json](https://github.com/digitalcredentials/mit-learn-ob-template/raw/refs/heads/main/certificates/programCertificate.json)
 
-![QR](certificates/programCertificate.png)
+![QR](/programCertificate.png)
 
