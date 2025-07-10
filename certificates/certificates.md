@@ -4,9 +4,9 @@ Open Badge version 3 samples of the three MIT Learn Certificates (course, module
 
 Below are links to the JSON for each credential and also QRs pointing at the same links.
 
-You can paste the urls into VerifierPlus or open the url, copy the JSON of the credential, and paste that directly into VerifierPlus.
+You can paste the urls into [VerifierPlus](https://verifierplus.org) or open the url, copy the JSON of the credential, and paste that into VerifierPlus.
 
-To import the credential into the Learner Credential Wallet (LCW), while in LCW choose to add a credential, then choose to scan it, then scan the QRs below.
+To import the credential into the [Learner Credential Wallet (LCW)](https://lcw.app), open the LCW, choose to add a credential, then choose to scan it, then scan the QRs below.
 
 ## Sample
 
