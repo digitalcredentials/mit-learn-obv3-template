@@ -1,13 +1,15 @@
-# MIT Learn Certificate Models
+# MIT Learn Certificate OBv3 Samples
 
-Links to the raw github url for each credential and also a QR pointing at the raw github url.
+Open Badge version 3 samples of the three MIT Learn Certificates (course, module, program).
 
-The raw url is intended for testing in VerifierPlus and the QR for testing in the Learner Credential Wallet.
+Below are links to the JSON for each credential and also QRs pointing at the same links.
 
-## Credentials
+You can paste the urls into VerifierPlus or open the url, copy the JSON of the credential, and paste that directly into VerifierPlus.
 
+To import the credential into the Learner Credential Wallet (LCW), while in LCW choose to add a credential, then choose to scan it, then scan the QRs below.
 
-  
+## Sample
+
 ### /courseCertificate.json
 
 [courseCertificate.json](https://github.com/digitalcredentials/mit-learn-ob-template/raw/refs/heads/main/certificates/courseCertificate.json)
