@@ -108,7 +108,16 @@ Below we have an example showing how these properties are defined:
 ```
 
 # credentialSubject
-A verifiable credential(VC) MUST contain a credentialSubject property.  
+A verifiable credential(VC) MUST contain a credentialSubject property. 
+
+The OBV3 specification is based on the core VC specification, which has different property requirements. Neither the credentialSubject nor id are required for VC's, whereas for the OBV3 specification, credentialSubject IS required, but is is not.
+
+| Specification | Property | Required? |
+| :------- | --------: | :------: |
+| VC | credentialSubject | N | 
+| VC | id | N | 
+| OBV3 | credentialSubject | Y |
+| OBV3 | id | N |
 
 The value of the credentialSubject property is a set of objects where each object MUST be the subject of one or more claims, which MUST be serialized inside the credentialSubject property. Each object MAY also contain an id property to identify the subject.
 
