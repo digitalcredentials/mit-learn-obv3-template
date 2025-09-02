@@ -7,7 +7,7 @@ Links to signed versions of the credentials, along with QR codes for each link, 
 You can use those links to open the credentials in VerifierPlus or add them to the Learner Credential Wallet.
 
 
-# Recommended taxonomy
+# Recommended properties
 
 Verifiable credentials (VC's) for open badges follow the [OBV3 standard](https://www.imsglobal.org/spec/ob/v3p0).
 
@@ -23,12 +23,13 @@ VC's have many properties, but to ensure compatibility with the DCC's [Learner C
 | validUntil | Expresses the date and time when a credential ceases to be valid | Y | [More Info](https://www.w3.org/TR/vc-data-model-2.0/#validity-period) |
 | name | Expresses name of credential | N | [More Info](https://www.w3.org/TR/vc-data-model-2.0/#names-and-descriptions) |
 | description | Conveys specific details about a credential | N | [More Info](https://www.w3.org/TR/vc-data-model-2.0/#names-and-descriptions) |
-| credentialSubject |  Expression of claims about one or more subjects. See credentialSubject section below | Y | [More Info](https://www.w3.org/TR/vc-data-model-2.0/#credential-subject) |
+| credentialSubject* |  Expression of claims about one or more subjects. See credentialSubject section below | Y | [More Info](https://www.w3.org/TR/vc-data-model-2.0/#credential-subject) |
 
+
+* Achievement Subject: the credentialSubject for VCs.  Open badges are VC's that are specified by a "type" of Achievement Subject under the credentialSubject. Please see section on Credential Subject
 
 
 # Annotated Badge example
-
 Below we have an example showing how these properties are defined:
 
 ```
@@ -106,10 +107,22 @@ Below we have an example showing how these properties are defined:
 }
 ```
 
-# Credential Subject
-A verifiable credential MUST contain a credentialSubject property.
+# credentialSubject
+A verifiable credential(VC) MUST contain a credentialSubject property.  
 
 The value of the credentialSubject property is a set of objects where each object MUST be the subject of one or more claims, which MUST be serialized inside the credentialSubject property. Each object MAY also contain an id property to identify the subject.
+
+Open badges are VC's that are specified by a "type" of Achievement Subject under the credentialSubject.
+
+| Property | Description | Required? | More Info |
+| :------- | --------: | :------: | :------: |
+| id | Description | N | link |
+| type | Description | N | link |
+| activityStartDate | Description | N | link |
+| activityEndDate | Description | N | link |
+| name | Description | N | link |
+| creditsEarned | Description | N | link |
+| achievement | Description | N | link |
 
 In the example above, credentialSubject shows:
 ```
@@ -137,33 +150,12 @@ In the example above, credentialSubject shows:
     }
 ```
 
-Here's a more simplified example:
+In the example above for an open badge, the credentialSubject will have a type of "AchievementSubject".
 
-```
-{
-  "@context": [
-    "https://www.w3.org/ns/credentials/v2",
-    "https://www.w3.org/ns/credentials/examples/v2"
-  ],
-  "id": "http://university.example/credentials/3732",
-  "type": ["VerifiableCredential", "ExampleDegreeCredential"],
-  "issuer": "https://university.example/issuers/565049",
-  "validFrom": "2010-01-01T00:00:00Z",
-  "credentialSubject": {
-    "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
-    "degree": {
-      "type": "ExampleBachelorDegree",
-      "name": "Bachelor of Science and Arts"
-    }
-  }
-}
-```
+(Please note, id is NOT required, but the credentialSubject object IS required.)
 
-(Please note, id is NOT required.)
 
-| Property | Description | Required? |
-| :------- | --------: | :------: |
-| id | Description | N |
+An example of a full Open Badge VC is below:
 
 ```
 {
