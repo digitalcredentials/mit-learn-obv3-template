@@ -1,17 +1,21 @@
-# mit-learn-ob-template
+# mit-learn-open-badges-3-example-template
 
-OBv3 credential samples for MIT Learn course certificates
+Open Badges 3.0 credential samples for MIT Learn course certificates
 
 Links to signed versions of the credentials, along with QR codes for each link, are available [here](certificates/certificates.md)
 
 You can use those links to open the credentials in VerifierPlus or add them to the Learner Credential Wallet.
 
+Example:
+
+[(https://verifierplus.org/#verify?vc=https://raw.githubusercontent.com/digitalcredentials/mit-learn-ob-template/refs/heads/main/certificates/moduleCertificate.json)](https://verifierplus.org/#verify?vc=https://raw.githubusercontent.com/digitalcredentials/mit-learn-ob-template/refs/heads/main/certificates/moduleCertificate.json)
+
 
 # Recommended properties
 
-Verifiable credentials (VC's) for open badges follow the [OBV3 standard](https://www.imsglobal.org/spec/ob/v3p0).
+The DCC recommends using the [Open Badges 3.0 specification](https://www.imsglobal.org/spec/ob/v3p0). Open Badges 3.0 is compatible with W3C Verifiable Credentials [add link] but it has its own requirements and recommendations to support education credentials. 
 
-VC's have many properties, but to ensure compatibility with the DCC's [Learner Credential Wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet), we recommend using the properties  reviewed below:
+The following Open Badges 3.0 properties are displayed in the DCC's [Learner Credential Wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet).
 
 | Property | Description | Required? | More Info |
 | :------- | --------: | :------: | :------: |
