@@ -19,15 +19,15 @@ The following Open Badges 3.0 properties are displayed in the DCC's [Learner Cre
 
 | Property | Description | Required? | More Info |
 | :------- | --------: | :------: | :------: |
-| context | Specified shared language in the form of URLs | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| context | Specified shared language in the form of URLs | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
 | id | Globally unique identifier | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
 | type | Expresses Object type information | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
 | issuer | Property for expressing the issuer of a VC. See issuer section below | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
 | validFrom | Expresses the date and time when a credential becomes valid | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
 | validUntil | Expresses the date and time when a credential ceases to be valid | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| name | Expresses name of credential | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| description | Conveys specific details about a credential | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| credentialSubject* |  Expression of claims about one or more subjects. See credentialSubject section below | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| credentialSubject.achievement.name | Expresses name of credential | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| credentialSubject.achievement.description | Conveys specific details about a credential | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| credentialSubject.achievement.criteria | Conveys specific details about a credential | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
 
 
 * Achievement Subject: the credentialSubject for VCs.  Open badges are VC's that are specified by a "type" of Achievement Subject under the credentialSubject. Please see section on Credential Subject
