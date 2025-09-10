@@ -2,7 +2,7 @@
 
 Open Badges 3.0 credential samples for MIT Learn course certificates
 
-Links to signed versions of the credentials, along with QR codes for each link, are available [here](certificates/certificates.md)
+Links to signed versions of the credentials, along with QR codes for each link, are available [here](certificates/certificates.md). These examples would be signe dby the issuer and downloaded to be manually added to a mobile wlalet like the LCW, not issued ot the wallet speciifcally.
 
 You can use those links to open the credentials in VerifierPlus or add them to the Learner Credential Wallet.
 
@@ -19,15 +19,21 @@ The following Open Badges 3.0 properties are displayed in the DCC's [Learner Cre
 
 | Property | Description | Required? | More Info |
 | :------- | --------: | :------: | :------: |
-| context | Specified shared language in the form of URLs | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
-| id | Globally unique identifier | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| type | Expresses Object type information | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| issuer | Property for expressing the issuer of a VC. See issuer section below | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| validFrom | Expresses the date and time when a credential becomes valid | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| achievementCredential.context | Specified shared language in the form of URLs | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| achievementCredential.id | Globally unique identifier | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| achievementCredential.type | Expresses Object type information | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| achievementCredential.issuer | Property for expressing the issuer of a VC. See issuer section below | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| achievementCredential.issuer.type | Profile ||
+| achievementCredential.issuer.id | this is the signing DID ||
+| .achievementCredentialvalidFrom | Expresses the date and time when a credential becomes valid | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
 | validUntil | Expresses the date and time when a credential ceases to be valid | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| credentialSubject.achievement.name | Expresses name of credential | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| credentialSubject.achievement.description | Conveys specific details about a credential | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| credentialSubject.achievement.criteria | Conveys specific details about a credential | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| credentialSubject.type| must be "AchievementSubject"||
+| credentialSubject.achievement| required
+| credentialSubject.achievement.id | required
+| credentialSubject.achievement.type | required "achievement"
+| credentialSubject.achievement.name | Expresses name of credential | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| credentialSubject.achievement.description | Conveys specific details about a credential |Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| credentialSubject.achievement.criteria | Conveys specific details about a credential | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
 
 
 * Achievement Subject: the credentialSubject for VCs.  Open badges are VC's that are specified by a "type" of Achievement Subject under the credentialSubject. Please see section on Credential Subject
