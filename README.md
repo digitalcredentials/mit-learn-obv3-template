@@ -103,9 +103,10 @@ The DCC recommends using the [Open Badges 3.0 specification](https://www.imsglob
 
 The following Open Badges 3.0 properties are displayed in the DCC's [Learner Credential Wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) and [Verifier Plus](https://github.com/digitalcredentials/web-verifier-plus).
 
+
 | Property | Description | Required? | More Info |
 | :------- | --------: | :------: | :------: |
-| achievementCredential.context | Specified shared language in the form of URLs | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential){:target="_blank"} |
+| achievementCredential.context | Specified shared language in the form of URLs | Y | <a href="https://www.imsglobal.org/spec/ob/v3p0#achievementcredential" target="_blank">More Info</a> |
 | achievementCredential.id | Globally unique identifier | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
 | achievementCredential.type | Expresses Object type information. For open badges, should specify both "VerifiableCredential" and "OpenBadgeCredential". | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
 | achievementCredential.issuer | Property for expressing the issuer of a VC. | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
