@@ -120,8 +120,14 @@ The following Open Badges 3.0 properties are displayed in the DCC's [Learner Cre
 | achievementCredential.validUntil | Expresses the date and time when a credential ceases to be valid | N, but recommended if credential expires | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
 | credentialSubject| Of type "AchievementSubject". The recipient of the achievement. | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
 | credentialSubject.type| Must be "AchievementSubject"| Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#credentialschema) |
+| credenitalSubject.identifier| A collection of information about the recipient of an achievement | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
+| credentialSubject.identifier[0].type| Type of Identifier, always "IdentityObject" | Y, if including `identifier` | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
+| credentialSubject.identifier[0].identityHash| Name of earner | Y, if including `identifier` | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
+| credentialSubject.identifier[0].identitytType| The identity type | Y, if including `identifier` | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
+| credentialSubject.identifier[0].hashed| Whether or not the identityHash value is hashed | Y, if including `identifier` | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
+| credentialSubject.identifier[0].salt| If the identityHash is hashed, this should contain the string used to salt the hash.  | Y, if including `identifier` and if `hashed` = "true" | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
 | credentialSubject.achievement| Achievement object | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
-| credentialSubject.achievement.id | Y, but not recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
+| credentialSubject.achievement.id | Unambiguous reference to the credential | Y, but not recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
 | credentialSubject.achievement.type | Type must be “Achievement” | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
 | credentialSubject.achievement.name | Achievement name | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
 | credentialSubject.achievement.description | Achievement description | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
