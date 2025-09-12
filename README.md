@@ -126,12 +126,12 @@ The following Open Badges 3.0 properties are displayed in the DCC's [Learner Cre
 | credentialSubject.identifier[0].identitytType| The identity type | Y, if including `identifier` | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
 | credentialSubject.identifier[0].hashed| Whether or not the identityHash value is hashed | Y, if including `identifier` | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
 | credentialSubject.identifier[0].salt| If the identityHash is hashed, this should contain the string used to salt the hash.  | Y, if including `identifier` and if `hashed` = "true" | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
-| credentialSubject.achievement| Achievement object | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
-| credentialSubject.achievement.id | Unambiguous reference to the credential | Y, but not recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
-| credentialSubject.achievement.type | Type must be “Achievement” | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
-| credentialSubject.achievement.name | Achievement name | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
-| credentialSubject.achievement.description | Achievement description | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
-| credentialSubject.achievement.criteria | Achievement criteria | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
+| credentialSubject.achievement| Achievement object | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievement) |
+| credentialSubject.achievement.id | Unambiguous reference to the credential | Y, but not recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievement) |
+| credentialSubject.achievement.type | Type must be “Achievement” | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievement) |
+| credentialSubject.achievement.name | Achievement name | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievement) |
+| credentialSubject.achievement.description | Achievement description | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievement) |
+| credentialSubject.achievement.criteria | Achievement criteria | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievement) |
 
 
 Notes: 
