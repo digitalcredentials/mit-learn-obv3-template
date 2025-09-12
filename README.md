@@ -13,7 +13,7 @@ Example:
 # How to use Open Badges (OBv3)
 
 ## Annotated Badge example
-The JSON below is an example of an open badge for a course [courseCertificate.json](https://github.com/digitalcredentials/mit-learn-ob-template/blob/main/certificates/courseCertificate.json). Other examples of open badges can be found [here:](https://github.com/digitalcredentials/mit-learn-ob-template/blob/main/certificates).
+The JSON below is an example of an open badge for a course [(courseCertificate.json)](https://github.com/digitalcredentials/mit-learn-ob-template/blob/main/certificates/courseCertificate.json). Other examples of open badges can be found [here:](https://github.com/digitalcredentials/mit-learn-ob-template/blob/main/certificates).
 
 ```
 {
