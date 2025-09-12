@@ -4,9 +4,9 @@ Open Badges 3.0 credential samples for MIT Learn course certificates
 
 Links to signed versions of the credentials, along with QR codes for each link, are available [here](certificates/certificates.md). These examples would be signed by the issuer and downloaded to be manually added to a mobile wlalet like the LCW, not issued ot the wallet speciifcally.
 
-You can use those links to open the credentials in VerifierPlus or add them to the Learner Credential Wallet.
+You can use those links to open the credentials in [Verifier Plus](https://verifierplus.org) or add them to the [Learner Credential Wallet.](https://www.lcw.app) 
 
-Example:
+Example of a VC:
 
 [(https://verifierplus.org/#verify?vc=https://raw.githubusercontent.com/digitalcredentials/mit-learn-obv3-template/refs/heads/main/certificates/moduleCertificate.json)](https://verifierplus.org/#verify?vc=https://raw.githubusercontent.com/digitalcredentials/mit-learn-obv3-template/refs/heads/main/certificates/moduleCertificate.json)
 
@@ -105,7 +105,7 @@ The following Open Badges 3.0 properties are displayed in the DCC's [Learner Cre
 
 | Property | Description | Required? | More Info |
 | :------- | --------: | :------: | :------: |
-| achievementCredential.context | Specified shared language in the form of URLs | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| achievementCredential.context | Specified shared language in the form of URLs | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential&target="blank") |
 | achievementCredential.id | Globally unique identifier | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
 | achievementCredential.type | Expresses Object type information. For open badges, should specify both "VerifiableCredential" and "OpenBadgeCredential". | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
 | achievementCredential.issuer | Property for expressing the issuer of a VC. | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
