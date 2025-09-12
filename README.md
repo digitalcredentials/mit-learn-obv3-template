@@ -119,7 +119,7 @@ The following Open Badges 3.0 properties are displayed in the DCC's [Learner Cre
 | achievementCredential.validFrom | Expresses the date and time when a credential becomes valid | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
 | achievementCredential.validUntil | Expresses the date and time when a credential ceases to be valid | N, but recommended if credential expires | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
 | credentialSubject| Of type "AchievementSubject". The recipient of the achievement. | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
-| credentialSubject.type| Must be "AchievementSubject"| Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#credentialschema) |
+| credentialSubject.type| Must be "AchievementSubject" | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementsubject) |
 | credenitalSubject.identifier| A collection of information about the recipient of an achievement | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
 | credentialSubject.identifier[0].type| Type of Identifier, always "IdentityObject" | Y, if including `identifier` | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
 | credentialSubject.identifier[0].identityHash| Name of earner | Y, if including `identifier` | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
@@ -140,9 +140,6 @@ Notes:
 - A verifiable credential(VC) MUST contain a credentialSubject property.
 - The OBV3 specification is based on the core VC specification, which has different property requirements. Neither the credentialSubject nor id are required for VC's, whereas for the OBV3 specification, credentialSubject IS required, but is is not.
 - The value of the credentialSubject property is a set of objects where each object MUST be the subject of one or more claims, which MUST be serialized inside the credentialSubject property. Each object MAY also contain an id property to identify the subject.
-
-
-
-
+- Type of credentialSubject	is AchievementSubject, and credentialSubject is under AchievementCredential
 
 
