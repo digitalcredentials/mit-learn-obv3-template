@@ -8,7 +8,7 @@ You can use those links to open the credentials in VerifierPlus or add them to t
 
 Example:
 
-[(https://verifierplus.org/#verify?vc=https://raw.githubusercontent.com/digitalcredentials/mit-learn-ob-template/refs/heads/main/certificates/moduleCertificate.json)](https://verifierplus.org/#verify?vc=https://raw.githubusercontent.com/digitalcredentials/mit-learn-ob-template/refs/heads/main/certificates/moduleCertificate.json)
+[(https://verifierplus.org/#verify?vc=https://raw.githubusercontent.com/digitalcredentials/mit-learn-obv3-template/refs/heads/main/certificates/moduleCertificate.json)](https://verifierplus.org/#verify?vc=https://raw.githubusercontent.com/digitalcredentials/mit-learn-obv3-template/refs/heads/main/certificates/moduleCertificate.json)
 
 # How to use Open Badges (OBv3)
 
