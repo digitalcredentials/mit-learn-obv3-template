@@ -135,11 +135,10 @@ The following Open Badges 3.0 properties are displayed in the DCC's [Learner Cre
 
 
 Notes: 
-- OpenBadgeCredential is an alias to AchievementCredential, which is defined under the parent/root level “type". This is why we define the `context`, `id`, `type`, issuer object, etc., as under `achievementCredential`.
+- Type of credentialSubject	is AchievementSubject, and credentialSubject is under AchievementCredential. OpenBadgeCredential is an alias to AchievementCredential, which is defined under the parent/root level “type". This is why we define the `context`, `id`, `type`, issuer object, etc., as under `achievementCredential`.
 - Open badges are VC's that are specified by a "type" of Achievement Subject under the credentialSubject. Achievement Subject is the credentialSubject for VCs.  Open badges are VC's that are specified by a "type" of Achievement Subject under the credentialSubject. In the example above for an open badge, the credentialSubject will have a type of "AchievementSubject".
 - A verifiable credential(VC) MUST contain a credentialSubject property.
 - The OBV3 specification is based on the core VC specification, which has different property requirements. Neither the credentialSubject nor id are required for VC's, whereas for the OBV3 specification, credentialSubject IS required, but is is not.
 - The value of the credentialSubject property is a set of objects where each object MUST be the subject of one or more claims, which MUST be serialized inside the credentialSubject property. Each object MAY also contain an id property to identify the subject.
-- Type of credentialSubject	is AchievementSubject, and credentialSubject is under AchievementCredential
 
 
