@@ -82,7 +82,15 @@ Below we have an example showing how these properties are defined:
         ],
         "activityStartDate": "2023-03-01T00:00:00Z",
         "activityEndDate": "2025-02-24T00:00:00Z",
-        "name": "Lucas Delisle-Doray",
+        "identifier": [
+            {
+                "type": "IdentityObject",
+                "identityHash": "Lucas Delisle-Doray",
+                "identityType": "name",
+                "hashed": false,
+                "salt": "not-used"
+            }
+        ],
         "creditsEarned": 20,
         "achievement": {
             "id": "https://something.org/theCourse",
@@ -100,18 +108,18 @@ Below we have an example showing how these properties are defined:
     "proof": [
         {
             "type": "DataIntegrityProof",
-            "created": "2025-07-07T21:35:36Z",
+            "created": "2025-09-11T19:04:15Z",
             "verificationMethod": "did:key:z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q#z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q",
             "cryptosuite": "eddsa-rdfc-2022",
             "proofPurpose": "assertionMethod",
-            "proofValue": "z4RTkXbHLGJxDGshNveL4vKFHPcQAKUq5nkhUtC5Yw4aLbcJqiXMMTYxopHcrw4VxCqLhJEkqCPKT2Zp16tRAadzF"
+            "proofValue": "zngzEHNaHQJV3dsRBS3pHg8gauCJ9TS4Jg2dEWoLdRHyFodTEszgKW9AjiLHhHHJezyXdNtNxBpQcHuh754n9cAX"
         },
         {
             "type": "Ed25519Signature2020",
-            "created": "2025-07-07T21:35:36Z",
+            "created": "2025-09-11T19:04:15Z",
             "verificationMethod": "did:key:z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q#z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q",
             "proofPurpose": "assertionMethod",
-            "proofValue": "z4xja2GbX8j4NHnhTtwgkv8L96VcedGHRCuEHZQF5xjRZKi1UJf1Tt7ofcMjo44wofkaApVQUdCKHzmG7187EPKpa"
+            "proofValue": "z2Bd6qucfs93pbhFViRPkVPKceLLuvS2K9rzqFSJMMz7sJNma2owVhmqHWRwfBMat6iXMgvDoykYaYg24GMpFbWq4"
         }
     ]
 }
