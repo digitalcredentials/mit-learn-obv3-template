@@ -120,7 +120,7 @@ The following Open Badges 3.0 properties are displayed in the DCC's [Learner Cre
 | achievementCredential.validUntil | Expresses the date and time when a credential ceases to be valid | N, but recommended if credential expires | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
 | credentialSubject| Of type "AchievementSubject". The recipient of the achievement. | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
 | credentialSubject.type| Must be "AchievementSubject" | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementsubject) |
-| credenitalSubject.identifier| A collection of information about the recipient of an achievement | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
+| credentialSubject.identifier| A collection of information about the recipient of an achievement | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
 | credentialSubject.identifier[0].type| Type of Identifier, always "IdentityObject" | Y, if including `identifier` | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
 | credentialSubject.identifier[0].identityHash| Name of earner | Y, if including `identifier` | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
 | credentialSubject.identifier[0].identitytType| The identity type | Y, if including `identifier` | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#identityobject) |
