@@ -45,7 +45,6 @@ The JSON below is an example of an open badge for a course. Other examples of op
         "caption": "MIT Learn Certificate logo"
     },
     "validFrom": "2025-02-24T00:00:00Z",
-    "validUntil": "2030-01-01T00:00:00Z",
     "name": "Foundations of Universal AI",
     "description": "Course Certificate in Foundations of Universal AI.",
     "credentialSubject": {
@@ -102,92 +101,39 @@ The JSON below is an example of an open badge for a course. Other examples of op
 
 The DCC recommends using the [Open Badges 3.0 specification](https://www.imsglobal.org/spec/ob/v3p0). Open Badges 3.0 is compatible with [W3C Verifiable Credentials](https://www.w3.org/TR/vc-data-model-2.0/), but it has its own requirements and recommendations to support education credentials. 
 
-The following Open Badges 3.0 properties are displayed in the DCC's [Learner Credential Wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) and [Verifier Plus](https://www.verifierplus.org).
-
-OpenBadgeCrednential is an alias to AchievementCredential, defined under parent/root level “type". This is why we define the `context`, `id`, `type`, issuer object, etc., as under `achievementCredential`.
+The following Open Badges 3.0 properties are displayed in the DCC's [Learner Credential Wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) and [Verifier Plus](https://github.com/digitalcredentials/web-verifier-plus).
 
 | Property | Description | Required? | More Info |
 | :------- | --------: | :------: | :------: |
 | achievementCredential.context | Specified shared language in the form of URLs | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
-| achievementCredential.id | Globally unique identifier | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| achievementCredential.type | Expresses Object type information. For open badges, should specify both "VerifiableCredential" and "OpenBadgeCredential". | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| achievementCredential.issuer | Property for expressing the issuer of a VC. | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| achievementCredential.issuer.type | Must be set to Profile for the Issuer object | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| achievementCredential.issuer.id | This is the signing DID of the issuer | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| achievementCredential.issuer.name | Name of issuer | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| achievementCredential.issuer.image | Image information for issuer | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| achievementCredential.issuer.url | Issuer url | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| .achievementCredentialvalidFrom | Expresses the date and time when a credential becomes valid | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| validUntil | Expresses the date and time when a credential ceases to be valid | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| credentialSubject.type| must be "AchievementSubject"||
-| credentialSubject.achievement| required
-| credentialSubject.achievement.id | Y, but not recommended | 
-| credentialSubject.achievement.type | required "achievement"
-| credentialSubject.achievement.name | Expresses name of credential | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| credentialSubject.achievement.description | Conveys specific details about a credential |Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| credentialSubject.achievement.criteria | Conveys specific details about a credential | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| achievementCredential.id | Globally unique identifier | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| achievementCredential.type | Expresses Object type information. For open badges, should specify both "VerifiableCredential" and "OpenBadgeCredential". | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| achievementCredential.issuer | Property for expressing the issuer of a VC. | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| achievementCredential.issuer.type | Must be set to Profile for the Issuer object | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| achievementCredential.issuer.id | Signing DID of the issuer | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| achievementCredential.issuer.name | Name of issuer | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| achievementCredential.issuer.image | Image information for issuer | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| achievementCredential.issuer.url | Issuer url | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| achievementCredential.name | Name of credential | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| achievementCredential.description | Description of credential | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| achievementCredential.validFrom | Expresses the date and time when a credential becomes valid | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| achievementCredential.validUntil | Expresses the date and time when a credential ceases to be valid | N, but recommended if credential expires | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| credentialSubject| Of type "AchievementSubject". The recipient of the achievement. | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
+| credentialSubject.type| Must be "AchievementSubject"| Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#credentialschema) |
+| credentialSubject.achievement| Achievement object | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
+| credentialSubject.achievement.id | Y, but not recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
+| credentialSubject.achievement.type | Type must be “Achievement” | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
+| credentialSubject.achievement.name | Achievement name | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
+| credentialSubject.achievement.description | Achievement description | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
+| credentialSubject.achievement.criteria | Achievement criteria | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0/#achievementcredential) |
 
 
-* Achievement Subject: the credentialSubject for VCs.  Open badges are VC's that are specified by a "type" of Achievement Subject under the credentialSubject. Please see section on Credential Subject
-
-* 
-Below we have an example showing how these properties are defined. 
-
-# credentialSubject
-A verifiable credential(VC) MUST contain a credentialSubject property. 
-
-The OBV3 specification is based on the core VC specification, which has different property requirements. Neither the credentialSubject nor id are required for VC's, whereas for the OBV3 specification, credentialSubject IS required, but is is not.
-
-| Specification | Property | Required? |
-| :------- | --------: | :------: |
-| VC | credentialSubject | N | 
-| VC | id | N | 
-| OBV3 | credentialSubject | Y |
-| OBV3 | id | N |
-
-The value of the credentialSubject property is a set of objects where each object MUST be the subject of one or more claims, which MUST be serialized inside the credentialSubject property. Each object MAY also contain an id property to identify the subject.
-
-Open badges are VC's that are specified by a "type" of Achievement Subject under the credentialSubject.
-
-| Property | Description | Required? | More Info |
-| :------- | --------: | :------: | :------: |
-| id | Description | N | link |
-| type | Description | N | link |
-| activityStartDate | Description | N | link |
-| activityEndDate | Description | N | link |
-| name | Description | N | link |
-| creditsEarned | Description | N | link |
-| achievement | Description | N | link |
-
-In the example above, credentialSubject shows:
-```
-    "credentialSubject": {
-        "id": "did:key:093093",
-        "type": [
-            "AchievementSubject"
-        ],
-        "activityStartDate": "2023-03-01T00:00:00Z",
-        "activityEndDate": "2025-02-24T00:00:00Z",
-        "name": "Lucas Delisle-Doray",
-        "creditsEarned": 20,
-        "achievement": {
-            "id": "https://something.org/theCourse",
-            "achievementType": "Course",
-            "type": [
-                "Achievement"
-            ],
-            "criteria": {
-                "narrative": "If you wanted to add some kind of criteria, e.g. a list of courses or modules, etc."
-            },
-            "description": "Lucas Delisle-Doray has successfully completed all modules and earned a Course Certificate in Foundations of Universal AI.",
-            "name": "Foundations of Universal AI"
-        }
-    }
-```
-
-In the example above for an open badge, the credentialSubject will have a type of "AchievementSubject".
-
-(Please note, id is NOT required, but the credentialSubject object IS required.)
+Notes: 
+- OpenBadgeCredential is an alias to AchievementCredential, which is defined under the parent/root level “type". This is why we define the `context`, `id`, `type`, issuer object, etc., as under `achievementCredential`.
+- Open badges are VC's that are specified by a "type" of Achievement Subject under the credentialSubject. Achievement Subject is the credentialSubject for VCs.  Open badges are VC's that are specified by a "type" of Achievement Subject under the credentialSubject. In the example above for an open badge, the credentialSubject will have a type of "AchievementSubject".
+- A verifiable credential(VC) MUST contain a credentialSubject property.
+- The OBV3 specification is based on the core VC specification, which has different property requirements. Neither the credentialSubject nor id are required for VC's, whereas for the OBV3 specification, credentialSubject IS required, but is is not.
+- The value of the credentialSubject property is a set of objects where each object MUST be the subject of one or more claims, which MUST be serialized inside the credentialSubject property. Each object MAY also contain an id property to identify the subject.
 
 
 
