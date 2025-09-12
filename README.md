@@ -1,8 +1,8 @@
-# mit-learn-open-badges-3-example-template
+# mit-learn-obv3-template
 
 Open Badges 3.0 credential samples for MIT Learn course certificates
 
-Links to signed versions of the credentials, along with QR codes for each link, are available [here](certificates/certificates.md). These examples would be signe dby the issuer and downloaded to be manually added to a mobile wlalet like the LCW, not issued ot the wallet speciifcally.
+Links to signed versions of the credentials, along with QR codes for each link, are available [here](certificates/certificates.md). These examples would be signed by the issuer and downloaded to be manually added to a mobile wlalet like the LCW, not issued ot the wallet speciifcally.
 
 You can use those links to open the credentials in VerifierPlus or add them to the Learner Credential Wallet.
 
@@ -10,37 +10,10 @@ Example:
 
 [(https://verifierplus.org/#verify?vc=https://raw.githubusercontent.com/digitalcredentials/mit-learn-ob-template/refs/heads/main/certificates/moduleCertificate.json)](https://verifierplus.org/#verify?vc=https://raw.githubusercontent.com/digitalcredentials/mit-learn-ob-template/refs/heads/main/certificates/moduleCertificate.json)
 
+# How to use Open Badges (OBv3)
 
-# Recommended properties
-
-The DCC recommends using the [Open Badges 3.0 specification](https://www.imsglobal.org/spec/ob/v3p0). Open Badges 3.0 is compatible with W3C Verifiable Credentials [add link] but it has its own requirements and recommendations to support education credentials. 
-
-The following Open Badges 3.0 properties are displayed in the DCC's [Learner Credential Wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet).
-
-| Property | Description | Required? | More Info |
-| :------- | --------: | :------: | :------: |
-| achievementCredential.context | Specified shared language in the form of URLs | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
-| achievementCredential.id | Globally unique identifier | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| achievementCredential.type | Expresses Object type information | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| achievementCredential.issuer | Property for expressing the issuer of a VC. See issuer section below | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| achievementCredential.issuer.type | Profile ||
-| achievementCredential.issuer.id | this is the signing DID ||
-| .achievementCredentialvalidFrom | Expresses the date and time when a credential becomes valid | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| validUntil | Expresses the date and time when a credential ceases to be valid | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| credentialSubject.type| must be "AchievementSubject"||
-| credentialSubject.achievement| required
-| credentialSubject.achievement.id | required
-| credentialSubject.achievement.type | required "achievement"
-| credentialSubject.achievement.name | Expresses name of credential | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| credentialSubject.achievement.description | Conveys specific details about a credential |Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-| credentialSubject.achievement.criteria | Conveys specific details about a credential | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
-
-
-* Achievement Subject: the credentialSubject for VCs.  Open badges are VC's that are specified by a "type" of Achievement Subject under the credentialSubject. Please see section on Credential Subject
-
-
-# Annotated Badge example
-Below we have an example showing how these properties are defined:
+## Annotated Badge example
+The JSON below is an example of an open badge for a course. Other examples of open badges can be found [here:](https://github.com/digitalcredentials/mit-learn-ob-template/blob/main/certificates) 
 
 ```
 {
@@ -125,6 +98,41 @@ Below we have an example showing how these properties are defined:
 }
 ```
 
+## Recommended properties
+
+The DCC recommends using the [Open Badges 3.0 specification](https://www.imsglobal.org/spec/ob/v3p0). Open Badges 3.0 is compatible with [W3C Verifiable Credentials](https://www.w3.org/TR/vc-data-model-2.0/), but it has its own requirements and recommendations to support education credentials. 
+
+The following Open Badges 3.0 properties are displayed in the DCC's [Learner Credential Wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) and [Verifier Plus](https://www.verifierplus.org).
+
+OpenBadgeCrednential is an alias to AchievementCredential, defined under parent/root level “type". This is why we define the `context`, `id`, `type`, issuer object, etc., as under `achievementCredential`.
+
+| Property | Description | Required? | More Info |
+| :------- | --------: | :------: | :------: |
+| achievementCredential.context | Specified shared language in the form of URLs | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0#achievementcredential) |
+| achievementCredential.id | Globally unique identifier | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| achievementCredential.type | Expresses Object type information. For open badges, should specify both "VerifiableCredential" and "OpenBadgeCredential". | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| achievementCredential.issuer | Property for expressing the issuer of a VC. | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| achievementCredential.issuer.type | Must be set to Profile for the Issuer object | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| achievementCredential.issuer.id | This is the signing DID of the issuer | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| achievementCredential.issuer.name | Name of issuer | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| achievementCredential.issuer.image | Image information for issuer | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| achievementCredential.issuer.url | Issuer url | N, but recommended | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| .achievementCredentialvalidFrom | Expresses the date and time when a credential becomes valid | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| validUntil | Expresses the date and time when a credential ceases to be valid | N | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| credentialSubject.type| must be "AchievementSubject"||
+| credentialSubject.achievement| required
+| credentialSubject.achievement.id | Y, but not recommended | 
+| credentialSubject.achievement.type | required "achievement"
+| credentialSubject.achievement.name | Expresses name of credential | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| credentialSubject.achievement.description | Conveys specific details about a credential |Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+| credentialSubject.achievement.criteria | Conveys specific details about a credential | Y | [More Info](https://www.imsglobal.org/spec/ob/v3p0) |
+
+
+* Achievement Subject: the credentialSubject for VCs.  Open badges are VC's that are specified by a "type" of Achievement Subject under the credentialSubject. Please see section on Credential Subject
+
+* 
+Below we have an example showing how these properties are defined. 
+
 # credentialSubject
 A verifiable credential(VC) MUST contain a credentialSubject property. 
 
@@ -182,83 +190,6 @@ In the example above for an open badge, the credentialSubject will have a type o
 (Please note, id is NOT required, but the credentialSubject object IS required.)
 
 
-An example of a full Open Badge VC is below:
-
-```
-{
-  "@context": [
-    "https://www.w3.org/ns/credentials/v2"
-  ],
-  "type": [
-    "VerifiablePresentation"
-  ],
-  "verifiableCredential": [
-    {
-      "@context": [
-        "https://www.w3.org/ns/credentials/v2",
-        "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json",
-        "https://w3id.org/security/suites/ed25519-2020/v1"
-      ],
-      "id": "http://example.com/credentials/3527",
-      "type": [
-        "VerifiableCredential",
-        "OpenBadgeCredential"
-      ],
-      "issuer": {
-        "type": [
-          "Profile"
-        ],
-        "name": "Goodwill Industries International and SkillRise",
-        "url": "https://goodwill.org",
-        "image": {
-          "type": "Image",
-          "id": "https://dcc-brand-6e8f40c02581a52e.s3.us-west-2.amazonaws.com/26284b45438363f0a55b2cf215413c238652d557/goodwill-skillrise-logo.png",
-          "caption": "Goodwill-SkillRise partnership logo"
-        },
-        "id": "did:key:z6Mkqfv4hXbcAbDtam8v3DkpumyrxNaXBJJMcP3Mp7X1Ccwa"
-      },
-      "name": "Goodwill-SkillRise Digital Credentials Essentials",
-      "credentialSubject": {
-        "type": [
-          "AchievementSubject"
-        ],
-        "achievement": {
-          "id": "urn:uuid:910686a1-3743-4d52-9d2e-7bf62e1d745f",
-          "type": [
-            "Achievement"
-          ],
-          "achievementType": "Badge",
-          "criteria": {
-            "narrative": "To earn this credential, recipients successfully completed an assessment with a score of at least 80% (15 out of 18 points). The assessment evaluated the earner's understanding in key areas:\n\n - Knowledge of how digital credentials work and the various ways they can be earned\n - Comprehension of digital wallets and their role in storing and sharing credentials\n - Understanding of skills-based hiring principles and how employers evaluate candidates\n - Understanding how employers use skills-based approaches to evaluate candidates\n\nThe credential verifies that recipients can navigate the evolving landscape of skills documentation and presentation in today's job market."
-          },
-          "description": "This micro-credential certifies that the earner understands the three interconnected pillars of modern skills recognition: digital credentials, digital wallets, and skills-based hiring practices. Recipients have demonstrated knowledge of how these components work together to create new opportunities for job seekers to document, store, share, and leverage their skills in today's evolving labor market.",
-          "name": "Goodwill-SkillRise Digital Credential Essentials",
-          "image": {
-            "type": "Image",
-            "id": "https://dcc-brand-6e8f40c02581a52e.s3.us-west-2.amazonaws.com/26284b45438363f0a55b2cf215413c238652d557/badge-foundations.png",
-            "caption": "Digital Credentials Essentials shield"
-          }
-        },
-        "id": "did:key:z6MkqXjbx45MGTB5SKg4RY71Yez42DPkL91UWoVGULuBWou7"
-      },
-      "credentialStatus": {
-        "id": "https://dev.status.prettygoodskills.com/3I9nI2MOA0HjxD1iDe8G#1",
-        "type": "BitstringStatusListEntry",
-        "statusPurpose": "revocation",
-        "statusListCredential": "https://dev.status.prettygoodskills.com/3I9nI2MOA0HjxD1iDe8G",
-        "statusListIndex": "1"
-      },
-      "proof": {
-        "type": "Ed25519Signature2020",
-        "created": "2025-06-18T15:26:11Z",
-        "verificationMethod": "did:key:z6Mkqfv4hXbcAbDtam8v3DkpumyrxNaXBJJMcP3Mp7X1Ccwa#z6Mkqfv4hXbcAbDtam8v3DkpumyrxNaXBJJMcP3Mp7X1Ccwa",
-        "proofPurpose": "assertionMethod",
-        "proofValue": "z8G8RL3QHe9rjjLmmXiEYUNPfcmKaPtKDunbGbR1o34Bfm1SZdUtfgsRksg67UYSyR9rbCYcrqFWMuX521eoWKLc"
-      }
-    }
-  ]
-}
-```
 
 
 
