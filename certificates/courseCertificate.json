@@ -57,24 +57,40 @@
                 "narrative": "If you wanted to add some kind of criteria, e.g. a list of courses or modules, etc."
             },
             "description": "Lucas Delisle-Doray has successfully completed all modules and earned a Course Certificate in Foundations of Universal AI.",
-            "name": "Foundations of Universal AI"
+            "name": "Foundations of Universal AI",
+            "alignment": [
+                {
+                    "type": [
+                        "Alignment"
+                    ],
+                    "targetName": "Calculate and interpret descriptive statistics for either raw or grouped data.",
+                    "targetUrl": "https://credentialfinder.org/competency/ce-f0bd8183-a397-4876-ad02-6e5ecf5fd03b"
+                },
+                {
+                    "type": [
+                        "Alignment"
+                    ],
+                    "targetName": "Use regression and correlation analysis to interpret the results.",
+                    "targetUrl": "https://credentialfinder.org/competency/ce-b751ba4b-e9eb-4846-a909-342c4416d30f"
+                }
+            ]
         }
     },
     "proof": [
         {
             "type": "DataIntegrityProof",
-            "created": "2025-09-11T19:04:15Z",
+            "created": "2025-09-14T21:59:38Z",
             "verificationMethod": "did:key:z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q#z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q",
             "cryptosuite": "eddsa-rdfc-2022",
             "proofPurpose": "assertionMethod",
-            "proofValue": "zngzEHNaHQJV3dsRBS3pHg8gauCJ9TS4Jg2dEWoLdRHyFodTEszgKW9AjiLHhHHJezyXdNtNxBpQcHuh754n9cAX"
+            "proofValue": "z3FNE6awpLvj2KsBT48ZmH3sqUHVHz35sbfoXvhabWAFeUheGUYfhV9TPCMqvP76jrXANmZafBUa75DccwehJhjoj"
         },
         {
             "type": "Ed25519Signature2020",
-            "created": "2025-09-11T19:04:15Z",
+            "created": "2025-09-14T21:59:38Z",
             "verificationMethod": "did:key:z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q#z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q",
             "proofPurpose": "assertionMethod",
-            "proofValue": "z2Bd6qucfs93pbhFViRPkVPKceLLuvS2K9rzqFSJMMz7sJNma2owVhmqHWRwfBMat6iXMgvDoykYaYg24GMpFbWq4"
+            "proofValue": "z2KazxpMki8p5RjigEwm1bNnTtHcmaN5v5AdRbEvGLdXaYtk2soojZ4vG1iy2Y5pnZJQVZLM3UedzBSBFWc5WHTs3"
         }
     ]
 }
