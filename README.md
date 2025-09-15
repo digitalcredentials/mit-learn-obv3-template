@@ -2,7 +2,7 @@
 
 Open Badges 3.0 credential samples for MIT Learn course certificates
 
-Links to signed versions of the credentials, along with QR codes for each link, are available [here](certificates/certificates.md). These examples would be signed by the issuer and downloaded to be manually added to a mobile wlalet like the LCW, not issued ot the wallet speciifcally.
+Links to signed versions of the credentials, along with QR codes for each link, are available [here](certificates/certificates.md). These examples would be signed by the issuer and downloaded to be manually added to a mobile wlalet like the LCW, not issued to the wallet speciifcally.
 
 You can use those links to open the credentials in [Verifier Plus](https://verifierplus.org) or add them to the [Learner Credential Wallet.](https://www.lcw.app) 
 
