@@ -1,19 +1,17 @@
 # mit-learn-obv3-template
 
-Open Badges 3.0 credential samples for MIT Learn course certificates
+Open Badges 3.0 credential samples, standards, and recommendations for MIT Learn course certificates
 
-Links to signed versions of the credentials, along with QR codes for each link, are available [here](certificates/certificates.md). These examples would be signed by the issuer and downloaded to be manually added to a mobile wlalet like the LCW, not issued to the wallet speciifcally.
+Links to signed versions of the credentials, along with QR codes for each link, are available [here](certificates/certificates.md). These examples would be signed by the issuer and downloaded to be manually added to a mobile wallet like the LCW, although not issued to the wallet specifically.
 
-You can use those links to open the credentials in [Verifier Plus](https://verifierplus.org) or add them to the [Learner Credential Wallet.](https://www.lcw.app) 
+You can use those links to open the credentials in [Verifier Plus](https://verifierplus.org) or add them to the [Learner Credential Wallet](https://www.lcw.app).
 
-Example of a VC:
-
-[(https://verifierplus.org/#verify?vc=https://raw.githubusercontent.com/digitalcredentials/mit-learn-obv3-template/refs/heads/main/certificates/moduleCertificate.json)](https://verifierplus.org/#verify?vc=https://raw.githubusercontent.com/digitalcredentials/mit-learn-obv3-template/refs/heads/main/certificates/moduleCertificate.json)
+[Example of a VC used at MIT](https://verifierplus.org/#verify?vc=https://raw.githubusercontent.com/digitalcredentials/mit-learn-obv3-template/refs/heads/main/certificates/moduleCertificate.json)
 
 # How to use Open Badges (OBv3)
 
 ## Annotated Badge example
-The JSON below is an example of an open badge for a course [(courseCertificate.json)](https://github.com/digitalcredentials/mit-learn-ob-template/blob/main/certificates/courseCertificate.json). Other examples of open badges can be found [here:](https://github.com/digitalcredentials/mit-learn-ob-template/blob/main/certificates).
+The JSON below is an example of an open badge for a course which we'll call 'courseCertificate' [(the raw file of which can also found here)](https://github.com/digitalcredentials/mit-learn-ob-template/blob/main/certificates/courseCertificate.json). Other examples of open badges can be found [here](https://github.com/digitalcredentials/mit-learn-ob-template/blob/main/certificates).
 
 ```
 {
@@ -97,11 +95,17 @@ The JSON below is an example of an open badge for a course [(courseCertificate.j
 }
 ```
 
-## Recommended properties
+The verifiable credential (VC) above is composed of three parts: Claims, which are the actual statements about the subject (e.g., a driver's license); Proofs, which are cryptographic signatures from the issuer to ensure the claim's integrity and authenticity; and Metadata, which contains information about the credential itself, including its type, issuer, and expiration date. 
+
+This particular VC (and all other examples provided in this documentation) are Open Badge VC's using [specification version 3.0](https://www.imsglobal.org/spec/ob/v3p0), which we'll refer to as OBV3 VC's. 
+
+OBV3 VC's are digital, portable, and verifiable credentials that represent a specific achievement, skill, or competency, containing rich metadata about the achievement, issuer, and criteria, and which can be stored in a digital wallet for easy sharing and verification. 
+
+## Recommended properties for OBV3
 
 The DCC recommends using the [Open Badges 3.0 specification](https://www.imsglobal.org/spec/ob/v3p0). Open Badges 3.0 is compatible with [W3C Verifiable Credentials](https://www.w3.org/TR/vc-data-model-2.0/), but it has its own requirements and recommendations to support education credentials. 
 
-The following Open Badges 3.0 properties are displayed in the DCC's [Learner Credential Wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) and [Verifier Plus](https://github.com/digitalcredentials/web-verifier-plus).
+The following Open Badges 3.0 properties are displayed in the DCC's [Learner Credential Wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) and [Verifier Plus](https://github.com/digitalcredentials/).
 
 
 | Property | Description | Required? | More Info |
