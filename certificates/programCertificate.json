@@ -10,7 +10,7 @@
         "OpenBadgeCredential"
     ],
     "issuer": {
-        "id": "did:key:z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q",
+        "id": "did:key:z6MkjoriXdbyWD25YXTed114F8hdJrLXQ567xxPHAUKxpKkS",
         "type": [
             "Profile"
         ],
@@ -21,17 +21,9 @@
             "caption": "MIT Learn logo"
         }
     },
-    "image": {
-        "id": "https://github.com/digitalcredentials/test-files/assets/206059/01eca9f5-a508-40ac-9dd5-c12d11308894",
-        "type": "Image",
-        "caption": "MIT Learn Certificate logo"
-    },
     "validFrom": "2025-02-24T00:00:00Z",
     "validUntil": "2030-01-01T00:00:00Z",
-    "name": "AI and Precision Medicine",
-    "description": "Program Certificate in AI and Precision Medicine.",
     "credentialSubject": {
-        "id": "did:key:093093",
         "type": [
             "AchievementSubject"
         ],
@@ -46,13 +38,17 @@
                 "salt": "not-used"
             }
         ],
-        "creditsEarned": 20,
         "achievement": {
             "id": "https://something.org/theProgram",
             "achievementType": "Program",
             "type": [
                 "Achievement"
             ],
+            "image": {
+                "id": "https://github.com/digitalcredentials/test-files/assets/206059/01eca9f5-a508-40ac-9dd5-c12d11308894",
+                "type": "Image",
+                "caption": "MIT Learn Certificate logo"
+            },
             "criteria": {
                 "narrative": "If you wanted to add some kind of criteria, e.g. a list of courses or modules, etc."
             },
@@ -60,21 +56,12 @@
             "name": "AI and Precision Medicine"
         }
     },
-    "proof": [
-        {
-            "type": "DataIntegrityProof",
-            "created": "2025-09-11T19:08:04Z",
-            "verificationMethod": "did:key:z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q#z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q",
-            "cryptosuite": "eddsa-rdfc-2022",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z5ZRNJrPVmxtmFBrCZ3YMi9u4J3CGHyXJyMkcc2oAc8YZb2GXpD4935SEmrST2ZRxqjrPcMjiYHcrqhhezSixffDw"
-        },
-        {
-            "type": "Ed25519Signature2020",
-            "created": "2025-09-11T19:08:04Z",
-            "verificationMethod": "did:key:z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q#z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z5hH38EFEfj6HTsf9kFaP1QkS5chSmqtkni8Ne1SQtb3n1oFrCyZPPFHd3wyM1PSZVKsrwd9XmyG9MtQ7JJKvbRJf"
-        }
-    ]
+    "proof": {
+        "type": "DataIntegrityProof",
+        "created": "2025-12-12T17:55:28Z",
+        "verificationMethod": "did:key:z6MkjoriXdbyWD25YXTed114F8hdJrLXQ567xxPHAUKxpKkS#z6MkjoriXdbyWD25YXTed114F8hdJrLXQ567xxPHAUKxpKkS",
+        "cryptosuite": "eddsa-rdfc-2022",
+        "proofPurpose": "assertionMethod",
+        "proofValue": "z2bQAx3cJzrMgGWq4TbVzyd2HY2eNbsG51AWAzAwB9jL9FgthGjMhafkqbhAwGuDitwJJm4jiqBgqnxRrxLD4q7tp"
+    }
 }
