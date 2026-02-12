@@ -1,67 +1,51 @@
 {
-    "@context": [
-        "https://www.w3.org/ns/credentials/v2",
-        "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json",
-        "https://w3id.org/security/suites/ed25519-2020/v1"
-    ],
-    "id": "urn:uuid:19281fe8-90d2-4eao-a9da-67b188898a6c",
-    "type": [
-        "VerifiableCredential",
-        "OpenBadgeCredential"
-    ],
-    "issuer": {
-        "id": "did:key:z6MkjoriXdbyWD25YXTed114F8hdJrLXQ567xxPHAUKxpKkS",
-        "type": [
-            "Profile"
-        ],
-        "name": "MIT Learn",
-        "image": {
-            "id": "https://github.com/digitalcredentials/test-files/assets/206059/01eca9f5-a508-40ac-9dd5-c12d11308894",
-            "type": "Image",
-            "caption": "MIT Learn logo"
-        }
-    },
-    "validFrom": "2025-02-24T00:00:00Z",
-    "validUntil": "2030-01-01T00:00:00Z",
-    "credentialSubject": {
-        "type": [
-            "AchievementSubject"
-        ],
-        "activityStartDate": "2023-03-01T00:00:00Z",
-        "activityEndDate": "2025-02-24T00:00:00Z",
-        "identifier": [
-            {
-                "type": "IdentityObject",
-                "identityHash": "Lucas Delisle-Doray",
-                "identityType": "name",
-                "hashed": false,
-                "salt": "not-used"
-            }
-        ],
-        "achievement": {
-            "id": "https://something.org/theCourse",
-            "achievementType": "Course",
-            "type": [
-                "Achievement"
-            ],
-            "image": {
-                "id": "https://github.com/digitalcredentials/test-files/assets/206059/01eca9f5-a508-40ac-9dd5-c12d11308894",
-                "type": "Image",
-                "caption": "MIT Learn Certificate logo"
-            },
-            "criteria": {
-                "narrative": "- If you wanted to add some kind of criteria, e.g. a list of courses or modules, etc.\n- This can also be markdown, as it is in this example.\n- This is an unordered list."
-            },
-            "description": "Lucas Delisle-Doray has successfully completed all modules and earned a Course Certificate in Foundations of Universal AI.",
-            "name": "Foundations of Universal AI"
-        }
-    },
-    "proof": {
-        "type": "DataIntegrityProof",
-        "created": "2025-12-12T17:52:25Z",
-        "verificationMethod": "did:key:z6MkjoriXdbyWD25YXTed114F8hdJrLXQ567xxPHAUKxpKkS#z6MkjoriXdbyWD25YXTed114F8hdJrLXQ567xxPHAUKxpKkS",
-        "cryptosuite": "eddsa-rdfc-2022",
-        "proofPurpose": "assertionMethod",
-        "proofValue": "z5UBb8q7StJLsA839GjyMrFsB6atZRkeXx2MCmgaB6D4mDvQQujcxxzysF3F6d8MZgWQh4ftUCRbWCBWibyRMCwR8"
-    }
+	"@context": ["https://www.w3.org/ns/credentials/v2", "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json", "https://w3id.org/security/suites/ed25519-2020/v1"],
+	"id": "urn:uuid:19281fe8-90d2-4eao-a9da-67b188898a6c",
+	"type": ["VerifiableCredential", "OpenBadgeCredential"],
+	"issuer": {
+		"id": "did:key:z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q",
+		"type": ["Profile"],
+		"name": "MIT Learn",
+		"image": {
+			"id": "https://github.com/digitalcredentials/test-files/assets/206059/01eca9f5-a508-40ac-9dd5-c12d11308894",
+			"type": "Image",
+			"caption": "MIT Learn logo"
+		}
+	},
+	"validFrom": "2025-02-24T00:00:00Z",
+	"validUntil": "2030-01-01T00:00:00Z",
+	"credentialSubject": {
+		"type": ["AchievementSubject"],
+		"activityStartDate": "2023-03-01T00:00:00Z",
+		"activityEndDate": "2025-02-24T00:00:00Z",
+		"identifier": [{
+			"type": "IdentityObject",
+			"identityHash": "Lucas Delisle-Doray",
+			"identityType": "name",
+			"hashed": false,
+			"salt": "not-used"
+		}],
+		"achievement": {
+			"id": "https://something.org/theCourse",
+			"achievementType": "Course",
+			"type": ["Achievement"],
+			"image": {
+				"id": "https://github.com/digitalcredentials/test-files/assets/206059/01eca9f5-a508-40ac-9dd5-c12d11308894",
+				"type": "Image",
+				"caption": "MIT Learn Certificate logo"
+			},
+			"criteria": {
+				"narrative": "- If you wanted to add some kind of criteria, e.g. a list of courses or modules, etc.\n- This can also be markdown, as it is in this example.\n- This is an unordered list."
+			},
+			"description": "Lucas Delisle-Doray has successfully completed all modules and earned a Course Certificate in Foundations of Universal AI.",
+			"name": "Foundations of Universal AI"
+		}
+	},
+	"proof": {
+		"type": "Ed25519Signature2020",
+		"created": "2026-02-12T17:47:32Z",
+		"verificationMethod": "did:key:z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q#z6MknNQD1WHLGGraFi6zcbGevuAgkVfdyCdtZnQTGWVVvR5Q",
+		"proofPurpose": "assertionMethod",
+		"proofValue": "z5wauQJyw6n3xibK5E6cmgXyi55J2g8K7r3ugZNuuKnkvoSNdDzhw9w4iV9rDPHABFd7wvGeePvmfDz4m6WMaJwih"
+	}
 }
