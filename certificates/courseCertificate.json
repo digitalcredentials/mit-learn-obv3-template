@@ -50,7 +50,7 @@
                 "caption": "MIT Learn Certificate logo"
             },
             "criteria": {
-                "narrative": "If you wanted to add some kind of criteria, e.g. a list of courses or modules, etc. CAN BE MARKDOWN"
+                "narrative": "- If you wanted to add some kind of criteria, e.g. a list of courses or modules, etc.\n- This can also be markdown, as it is in this example.\n- This is an unordered list."
             },
             "description": "Lucas Delisle-Doray has successfully completed all modules and earned a Course Certificate in Foundations of Universal AI.",
             "name": "Foundations of Universal AI"
